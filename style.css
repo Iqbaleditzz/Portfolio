@@ -2,15 +2,20 @@
   --primary-color: #3c096c;
   --secondary-color: #d8e2dc;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background: var(--primary-color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--secondary-color);
+  font-size: 1.5rem;
 }
 nav {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -44,6 +49,18 @@ nav .fab {
 nav .icons {
   margin-right: 50px;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30px;
+  background-color: rgba(25, 24, 24, 0.5);
+  color: var(--secondary-color);
+}
 .logo img {
   height: 50px;
   width: 50px;
@@ -69,6 +86,8 @@ nav .icons {
   animation: flow 2s ease-in-out infinite alternate;
 }
 .about-me {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   width: 50%;
   padding: 30px;
 }
@@ -86,14 +105,13 @@ nav .icons {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 .skill-card {
-  height: 500px;
-  width: 300px;
+  height: 600px;
+  width: 350px;
   background: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 5px;
@@ -104,6 +122,9 @@ nav .icons {
   animation: fadein 5s 1s linear;
   animation-play-state: paused;
   cursor: pointer;
+}
+.skill-card ul {
+  list-style: none;
 }
 .skill-card h2 {
   color: var(--primary-color);
@@ -138,12 +159,13 @@ nav .icons {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding-bottom: 110px;
 }
 .project-card {
   color: var(--primary-color);
   padding: 20px;
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background: var(--secondary-color);
@@ -173,6 +195,27 @@ nav .icons {
 .project-card:nth-child(3):hover {
   transform: translateX(-150px) translateY(-100px);
   z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  .landing {
+    flex-direction: column;
+  }
+  .about-me {
+    padding: 20px;
+    width: 90%;
+  }
+  .profile-pic {
+    width: 350px;
+    height: auto;
+  }
+  .skills-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .project-section {
+    height: auto;
+    margin-top: 150px;
+  }
 }
 @keyframes fadein {
   0% {
