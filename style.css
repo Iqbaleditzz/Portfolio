@@ -101,7 +101,7 @@ nav .icons {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  animation: fadein 6s 1s linear;
+  animation: fadein 5s 1s linear;
   animation-play-state: paused;
   cursor: pointer;
 }
@@ -119,29 +119,60 @@ nav .icons {
   transition: 500ms ease-in-out;
 }
 .skill-card:nth-child(1) {
-  animation-delay: calc(var(--scroll) * -6s);
+  animation-delay: calc(var(--scroll) * -11s);
 }
 .skill-card:nth-child(1):hover {
   animation: gradient 1s linear forwards;
 }
 .skill-card:nth-child(2) {
-  animation-delay: calc(var(--scroll) * -9s);
+  animation-delay: calc(var(--scroll) * -13s);
 }
 .skill-card:nth-child(2):hover img {
   animation: rotate 30s linear infinite;
 }
 .skill-card:nth-child(3) {
-  animation-delay: calc(var(--scroll) * -12s);
+  animation-delay: calc(var(--scroll) * -15s);
 }
 .project-section {
   height: 100vh;
+  align-items: center;
   display: flex;
+  flex-direction: column;
 }
 .project-card {
+  color: var(--primary-color);
+  padding: 20px;
   width: 400px;
   height: 300px;
   border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background: var(--secondary-color);
+  cursor: pointer;
+}
+.project-card:hover {
+  transition: 500ms ease-in-out;
+  transform: translate(0, -400px);
+}
+.project-card:nth-child(4) {
+  transform: translateX(100px) translateY(-200px);
+}
+.project-card:nth-child(4):hover {
+  transform: translateX(150px) translateY(-200px);
+  z-index: 2;
+}
+.project-card:nth-child(2) {
+  transform: translateX(100px) translateY(0px);
+}
+.project-card:nth-child(2):hover {
+  transform: translateX(150px) translateY(0px);
+  z-index: 2;
+}
+.project-card:nth-child(3) {
+  transform: translateX(-100px) translateY(-100px);
+}
+.project-card:nth-child(3):hover {
+  transform: translateX(-150px) translateY(-100px);
+  z-index: 2;
 }
 @keyframes fadein {
   0% {
