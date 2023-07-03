@@ -123,6 +123,9 @@ footer {
   animation-play-state: paused;
   cursor: pointer;
 }
+.skill-card img {
+  object-fit: contain;
+}
 .skill-card ul {
   list-style: none;
 }
@@ -197,12 +200,16 @@ footer {
   z-index: 2;
 }
 @media screen and (max-width: 1200px) {
+  body {
+    font-size: 1.5rem;
+  }
   .landing {
     flex-direction: column;
   }
   .about-me {
     padding: 20px;
     width: 90%;
+    font-size: 3rem;
   }
   .profile-pic {
     width: 350px;
@@ -211,10 +218,23 @@ footer {
   .skills-section {
     flex-direction: column;
     height: auto;
+    gap: 40px;
+  }
+  .skill-card {
+    font-size: 3rem;
+    height: auto;
+    width: 80%;
+    animation: fadein 5s linear;
   }
   .project-section {
     height: auto;
     margin-top: 150px;
+    gap: 40px;
+  }
+  .project-card {
+    font-size: 2.5rem;
+    height: auto;
+    width: 60%;
   }
 }
 @keyframes fadein {
