@@ -174,75 +174,7 @@ footer {
   background: var(--secondary-color);
   cursor: pointer;
 }
-.project-card:hover {
-  transition: 500ms ease-in-out;
-  transform: translate(0, -400px);
-}
-.project-card:nth-child(4) {
-  transform: translateX(100px) translateY(-200px);
-}
-.project-card:nth-child(4):hover {
-  transform: translateX(150px) translateY(-200px);
-  z-index: 2;
-}
-.project-card:nth-child(2) {
-  transform: translateX(100px) translateY(0px);
-}
-.project-card:nth-child(2):hover {
-  transform: translateX(150px) translateY(0px);
-  z-index: 2;
-}
-.project-card:nth-child(3) {
-  transform: translateX(-100px) translateY(-100px);
-}
-.project-card:nth-child(3):hover {
-  transform: translateX(-150px) translateY(-100px);
-  z-index: 2;
-}
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-  body {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 1.5rem;
-  }
-  .landing {
-    flex-direction: column;
-  }
-  .about-me {
-    padding: 20px;
-    width: 90%;
-    font-size: 3rem;
-  }
-  .profile-pic {
-    width: 350px;
-    height: auto;
-  }
-  .skills-section {
-    margin-top: 400px;
-    flex-direction: column;
-    height: auto;
-    gap: 40px;
-  }
-  .skill-card {
-    font-size: 3rem;
-    height: auto;
-    width: 80%;
-    animation: fadein 5s linear;
-  }
-  .project-section {
-    height: auto;
-    margin-top: 150px;
-    gap: 40px;
-  }
-  .project-card {
-    font-size: 2.5rem;
-    height: auto;
-    width: 60%;
-  }
-}
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -298,5 +230,72 @@ footer {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .landing {
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+  .skills-section {
+    margin-top: 100px;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .skill-card {
+    animation: none;
+  }
+  .project-section {
+    height: auto;
+    gap: 40px;
+  }
+  nav {
+  }
+  nav ul {
+    display: none;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .project-card:hover {
+    transition: 500ms ease-in-out;
+    transform: translate(0, -400px);
+  }
+  .project-card:nth-child(4) {
+    transform: translateX(100px) translateY(-200px);
+  }
+  .project-card:nth-child(4):hover {
+    transform: translateX(150px) translateY(-200px);
+    z-index: 2;
+  }
+  .project-card:nth-child(2) {
+    transform: translateX(100px) translateY(0px);
+  }
+  .project-card:nth-child(2):hover {
+    transform: translateX(150px) translateY(0px);
+    z-index: 2;
+  }
+  .project-card:nth-child(3) {
+    transform: translateX(-100px) translateY(-100px);
+  }
+  .project-card:nth-child(3):hover {
+    transform: translateX(-150px) translateY(-100px);
+    z-index: 2;
   }
 }
