@@ -261,14 +261,20 @@ footer {
   }
   .skill-card {
     animation: none;
+    width: 80%;
+    text-align: center;
   }
   .project-section {
     height: auto;
     gap: 40px;
   }
-  nav {
+  .project-card {
+    width: 80%;
   }
   nav ul {
+    display: none;
+  }
+  footer {
     display: none;
   }
 }
