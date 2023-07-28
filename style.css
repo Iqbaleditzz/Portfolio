@@ -50,9 +50,7 @@ nav .icons {
   margin-right: 50px;
 }
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -102,7 +100,8 @@ footer {
   transform: scale(1.07);
 }
 .skills-section {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -119,9 +118,10 @@ footer {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  animation: fadein 5s 1s linear;
+  animation: fadein 3s 1s linear;
   animation-play-state: paused;
   cursor: pointer;
+  transition: 500ms ease-in-out;
 }
 .skill-card img {
   object-fit: contain;
@@ -139,26 +139,26 @@ footer {
   background: transparent;
 }
 .skill-card:hover {
-  transform: scale(1.05);
-  transition: 500ms ease-in-out;
+  transform: scale(1.04);
 }
 .skill-card:nth-child(1) {
-  animation-delay: calc(var(--scroll) * -11s);
+  animation-delay: calc(var(--scroll) * -14s);
 }
 .skill-card:nth-child(1):hover {
   animation: gradient 1s linear forwards;
 }
 .skill-card:nth-child(2) {
-  animation-delay: calc(var(--scroll) * -13s);
+  animation-delay: calc(var(--scroll) * -15s);
 }
 .skill-card:nth-child(2):hover img {
   animation: rotate 30s linear infinite;
 }
 .skill-card:nth-child(3) {
-  animation-delay: calc(var(--scroll) * -15s);
+  animation-delay: calc(var(--scroll) * -16s);
 }
 .project-section {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -173,6 +173,7 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background: var(--secondary-color);
   cursor: pointer;
+  transition: 500ms ease-in-out;
 }
 
 @keyframes fadein {
@@ -283,8 +284,10 @@ footer {
   }
 }
 @media screen and (min-width: 1201px) {
-  .project-card:hover {
+  .project-card {
     transition: 500ms ease-in-out;
+  }
+  .project-card:hover {
     transform: translate(0, -400px);
   }
   .project-card:nth-child(4) {
